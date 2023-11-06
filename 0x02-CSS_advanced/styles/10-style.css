@@ -53,7 +53,9 @@ a{
 .card-category{
     color: #D73953;
 }
-
+.section-header{
+    text-align: var(--section-header-align);
+}
 .section-tagline{
     color: #D73953;
 }
