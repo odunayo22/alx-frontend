@@ -54,7 +54,7 @@
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
     --transition-duration: .3s;
-    --transition-cubic-bezier: cubic-bezier(0.17, 0.67 0, 1.01)
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67 0, 1.0)
     
 
 
@@ -82,9 +82,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
-a{
+a[href]{
     text-decoration: none;
-    color: #161616;
+    background-color: var(--text-color);
 }
  
 a:visited{
@@ -109,10 +109,11 @@ a:active{
 }
 
 .button:hover{
-    color: var(--button-hover-color) var(--transition-duration);
+    color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
-    background-color: var(--button-hover-background) var(--transition-cubic-bezier);
+    background-color: var(--button-hover-background);
     transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
 
 }
 
@@ -276,13 +277,13 @@ body, a{
     font-size: var(--font-size-small);
     color: var(--text-color);
 }
-/*
+
 .row::after{
     content: "";
     display: table;
     float: clear;
 }
-*/
+
 [class^="col-"] {
 float: left;
 padding: 0.5rem;
